@@ -1,5 +1,4 @@
 
-
 # Use Xft?
 use_xft yes
 xftfont Profont:size=8
