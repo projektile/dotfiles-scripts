@@ -4,10 +4,7 @@
 
 " basic settings
 set tabstop=4
-set smarttab
-set noexpandtab
 set shiftwidth=4
-set softtabstop=4 tabstop=4
 set nowrap
 set noswapfile
 set backspace=indent,eol,start
@@ -21,12 +18,12 @@ set wildmenu
 set wildmode=longest,list
 set vb t_vb=
 set mouse=
-set fillchars+=vert:▪
+set fillchars+=vert:│
 set list
 set listchars=tab:\│\ ,trail:-
-set expandtab
+"set expandtab
 
-set laststatus=2
+set laststatus=4
 set splitright
 set splitbelow
 set autochdir
