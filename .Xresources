@@ -1,0 +1,81 @@
+
+
+! Xterm settings ------------------------------------------------------------
+
+*faceName: Tewi:style=Regular:size=8
+*allowBoldFonts: false
+
+! {{{ Quick Reference
+!
+! Scrolling:
+! Scroll Wheel
+! Shift-PgUp/PgDn
+!
+! Copy/Paste:
+! Mouse-Select : Copy to PRIMARY
+! Shift + Mouse-Select: Copy to CLIPBOARD
+!
+! Middle-Click : Paste from PRIMARY
+! Shift + Middle-Click: Paste from CLIPBOARD
+!
+! Ctrl+Shift+V : Paste from CLIPBOARD
+! Ctrl+Alt+Shift+V : Paste from PRIMARY
+!
+! }}}
+ 
+! URXVT settings ------------------------------------------------------------
+
+! More Konsole/Yakuake-like keybindings:
+*VT100.Translations: #override \
+Shift <Key>Up: scroll-back(1) \n\
+Shift <Key>Down: scroll-forw(1) \n\
+~Meta Shift Ctrl <Key>V: insert-selection(CLIPBOARD) \n\
+Meta Shift Ctrl <Key>V: insert-selection(PRIMARY) \n\
+~Shift <Btn1Up>: select-end(PRIMARY, CUT_BUFFER0) \n\
+Shift <Btn1Up>: select-end(CLIPBOARD, CUT_BUFFER1) \n\
+~Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(PRIMARY, CUT_BUFFER0) \n\
+Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(CLIPBOARD, CUT_BUFFER1)
+
+!RXVT Settings
+URxvt.font: xft:tewi:size=12
+URxvt.boldFont:xft:tewi:size=12
+URxvt.scrollBar: false
+URxvt.depth: 8
+URxvt*termName: rxvt
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+URxvt.iso14755: False
+
+URxvt.perl-ext-common: default,clipboard
+
+! Terminal colors
+! basic scheme
+*background: #111111
+*foreground: #d8d8d8
+! Black + DarkGrey
+*color0:  #000000
+*color8:  #555753
+! DarkRed + Red
+*color1:  #ba7b1e
+*color9:  #ebbc48
+! DarkGreen + Green
+*color2:  #728059
+*color10: #9ebf60
+! DarkYellow + Yellow
+*color3:  #596380
+*color11: #6078bf
+! DarkBlue + Blue
+*color4:  #3465a4
+*color12: #405974
+! DarkMagenta + Magenta
+*color5:  #75507b
+*color13: #8a4b66
+! DarkCyan + Cyan
+*color6:  #153b50
+*color14: #678472
+! LightGrey + White
+*color7:  #d3d7cf
+*color15: #eeeeee
+
+
