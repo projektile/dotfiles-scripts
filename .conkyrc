@@ -1,7 +1,7 @@
 
 # Use Xft?
 use_xft yes
-xftfont Profont:size=8
+xftfont Tewi:size=11
 xftalpha 0.8
 text_buffer_size 2048
 
@@ -16,7 +16,7 @@ total_run_times 0
 own_window yes
 own_window_transparent yes
 #own_window_type override
-own_window_type desktop
+own_window_type normal
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 # Use double buffering (reduces flicker, may not work for everyone)
@@ -42,7 +42,7 @@ stippled_borders 0
 border_margin 5
 
 # border width
-border_width 1
+border_width 0
 
 # Default colors and also border colors
 #default_color 111111
@@ -60,14 +60,14 @@ alignment bottom_right
 # Gap between borders of screen and text
 # same thing as passing -x at command line
 gap_x 5
-gap_y -50
+gap_y 0
 
 TEXT
-${font Block Out 2097:size=15:style=bold}SYSTEM${hr 3}
-${font Profont:size=10}${voffset -4}${pre_exec cat /etc/issue.net} $machine
+${font}SYSTEM${hr 3}
+${font}${voffset 4}${pre_exec cat /etc/issue.net} $machine
 ${voffset 4}Kernel:${kernel}
 ${hr 3}
-${voffset 8}CPU1: ${cpu cpu0}%
+${voffset 6}CPU1: ${cpu cpu0}%
 ${voffset 2}${alignr}${cpubar cpu0 8,150}
 ${voffset 4}CPU2: ${cpu cpu1}%
 ${voffset 2}${alignr}${cpubar cpu1 8,150}
@@ -86,38 +86,39 @@ ${voffset 6}Uptime: ${alignr}${uptime}
 ${voffset 6}Processes: ${alignr}$processes($running_processes running)
 ${voffset 6}Top CPU: ${alignr 21}PID${alignr 11}CPU${alignr}RAM
 ${voffset -6}${hr 1}
-${voffset -3}${font Profont:size=6}${top name 1} ${alignr 27}${top pid 1}${alignr 30}${top cpu 1}
-${voffset -10}${alignr }${top mem 1}
-${voffset -3}${font Profont:size=6}${top name 2} ${alignr 27}${top pid 2}${alignr 30}${top cpu 2}
-${voffset -10}${alignr }${top mem 2}
-${voffset -3}${font Profont:size=6}${top name 3} ${alignr 27}${top pid 3}${alignr 30}${top cpu 3}
-${voffset -10}${alignr }${top mem 3}
-${voffset -3}${font Profont:size=6}${top name 4} ${alignr 27}${top pid 4}${alignr 30}${top cpu 4}
-${voffset -10}${alignr }${top mem 4}
-${voffset -3}${font Profont:size=6}${top name 5} ${alignr 27}${top pid 5}${alignr 30}${top cpu 5}
-${voffset -10}${alignr }${top mem 5}
+${voffset -1}${font Fixed:size=6}${top name 1} ${alignr 27}${top pid 1}${alignr 30}${top cpu 1}
+${voffset -8}${alignr }${top mem 1}
+${voffset -1}${font Fixed:size=6}${top name 2} ${alignr 27}${top pid 2}${alignr 30}${top cpu 2}
+${voffset -8}${alignr }${top mem 2}
+${voffset -1}${font Fixed:size=6}${top name 3} ${alignr 27}${top pid 3}${alignr 30}${top cpu 3}
+${voffset -8}${alignr }${top mem 3}
+${voffset -1}${font Fixed:size=6}${top name 4} ${alignr 27}${top pid 4}${alignr 30}${top cpu 4}
+${voffset -8}${alignr }${top mem 4}
+${voffset -1}${font Fixed:size=6}${top name 5} ${alignr 27}${top pid 5}${alignr 30}${top cpu 5}
+${voffset -8}${alignr }${top mem 5}
+
 ${font}${voffset 4}Top RAM: ${alignr 21}PID${alignr 11}CPU${alignr}RAM
 ${voffset -6}${hr 1}
-${voffset -3}${font Profont:size=6}${top_mem name 1} ${alignr 27}${top_mem pid 1}${alignr 30}${top_mem cpu 1}
-${voffset -10}${alignr }${top_mem mem 1}
-${voffset -3}${font Profont:size=6}${top_mem name 2} ${alignr 27}${top_mem pid 2}${alignr 30}${top_mem cpu 2}
-${voffset -10}${alignr }${top_mem mem 2}
-${voffset -3}${font Profont:size=6}${top_mem name 3} ${alignr 27}${top_mem pid 3}${alignr 30}${top_mem cpu 3}
-${voffset -10}${alignr }${top_mem mem 3}
-${voffset -3}${font Profont:size=6}${top_mem name 4} ${alignr 27}${top_mem pid 4}${alignr 30}${top_mem cpu 4}
-${voffset -10}${alignr }${top_mem mem 4}
-${voffset -3}${font Profont:size=6}${top_mem name 5} ${alignr 27}${top_mem pid 5}${alignr 30}${top_mem cpu 5}
-${voffset -10}${alignr }${top_mem mem 5}
+${voffset -1}${font Fixed:size=6}${top_mem name 1} ${alignr 27}${top_mem pid 1}${alignr 30}${top_mem cpu 1}
+${voffset -8}${alignr }${top_mem mem 1}
+${voffset -1}${font Fixed:size=6}${top_mem name 2} ${alignr 27}${top_mem pid 2}${alignr 30}${top_mem cpu 2}
+${voffset -8}${alignr }${top_mem mem 2}
+${voffset -1}${font Fixed:size=6}${top_mem name 3} ${alignr 27}${top_mem pid 3}${alignr 30}${top_mem cpu 3}
+${voffset -8}${alignr }${top_mem mem 3}
+${voffset -1}${font Fixed:size=6}${top_mem name 4} ${alignr 27}${top_mem pid 4}${alignr 30}${top_mem cpu 4}
+${voffset -8}${alignr }${top_mem mem 4}
+${voffset -1}${font Fixed:size=6}${top_mem name 5} ${alignr 27}${top_mem pid 5}${alignr 30}${top_mem cpu 5}
+${voffset -8}${alignr }${top_mem mem 5}
 
-${voffset 6}${font Block Out 2097:size=15:style=bold}HARD DISK${hr 3}
-${voffset -4}${font}Used: ${fs_used_perc /}%
+${voffset 4}${font}HARD DISK${hr 3}
+${voffset 12}${font}Used: ${fs_used_perc /}%
 Free: ${fs_free /}${alignr}/ ${fs_size /}
 ${voffset 2}${alignr}${fs_bar 8,150 /}
 
-${voffset 4}${font Block Out 2097:size=15:style=bold}NETWORK${hr 3}
+${voffset 4}${font}NETWORK${hr 3}
 # |--WLAN0
 ${if_up wlan0}
-${voffset -25}${font}SSID: ${wireless_essid wlan0}
+${voffset 2}${font}SSID: ${wireless_essid wlan0}
 Signal: ${wireless_link_qual wlan0}%
 ${voffset 2}${alignr}${wireless_link_bar 8,150 wlan0}
 ${voffset 4}Up: ${upspeed wlan0}${font} ${alignr}Total: ${totalup wlan0}
@@ -130,23 +131,23 @@ ${voffset 4}Public IP: ${alignr}${execi 3600 wget -q -O /dev/stdout http://check
 ${voffset 4}MAC: ${alignr}${exec ifconfig | grep -A 0 'wlan0' | cut -c39-55}
 ${voffset 4}${font}${color}Inbound Connections: ${alignr} ${tcp_portmon 1 32767 count}
 ${voffset -6}${hr 1}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}
 ${voffset 4}${font}${color}Outbound Connections:  ${alignr} ${tcp_portmon 32768 65535 count}
 ${voffset -6}${hr 1}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
 
 ${hr 3}
 # |--ETH0
 ${else}${if_up eth0}
-${voffset -25}${font}SSID: ${wired_essid eth0}
+${voffset 4}${font}SSID: ${wired_essid eth0}
 ${voffset 2}${alignr}${wired_link_bar 8,150 eth0}
 ${voffset 4}${font}Up: ${upspeed eth0}${font} ${alignr}Total: ${totalup eth0}
 ${voffset 2}${alignr}${upspeedgraph eth0 8,150}
@@ -158,19 +159,18 @@ ${voffset 4}Public IP: ${alignr}${execi 3600 wget -q -O /dev/stdout http://check
 ${voffset 4}MAC: ${alignr}${exec ifconfig | grep -A 0 'eth0' | cut -c39-55}
 ${voffset 4}${font}${color}Inbound Connections: ${color}${goto 180}${tcp_portmon 1 32767 count}
 ${voffset -6}${hr 1}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
-${voffset -3}${font Profont:size=6}${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 2} ${alignr} ${tcp_portmon 1 32767 lservice 2}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 3} ${alignr} ${tcp_portmon 1 32767 lservice 3}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 1 32767 rhost 4} ${alignr} ${tcp_portmon 1 32767 lservice 4}
 ${voffset 4}${font}${color}Outbound Connections: ${color}${goto 180}${tcp_portmon 32768 65535 count}
 ${voffset -6}${hr 1}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
-${voffset -3}${font Profont:size=6}${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 3} ${alignr} ${tcp_portmon 32768 61000 rservice 3}
+${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 4} ${alignr} ${tcp_portmon 32768 61000 rservice 4}
 
 ${hr 3}
 ${endif}
-
