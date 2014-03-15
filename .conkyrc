@@ -1,4 +1,3 @@
-
 # Use Xft?
 use_xft yes
 xftfont Tewi:size=11
@@ -45,7 +44,7 @@ border_margin 5
 border_width 0
 
 # Default colors and also border colors
-#default_color 111111
+#default_color 000000
 default_color aaaaaa
 #default_shade_color white
 #default_outline_color white
@@ -174,3 +173,4 @@ ${voffset -1}${font Fixed:size=6}${tcp_portmon 32768 61000 rhost 4} ${alignr} ${
 
 ${hr 3}
 ${endif}
+
