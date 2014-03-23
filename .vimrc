@@ -1,4 +1,3 @@
-
 " General {{{
 "---------------
 
@@ -9,8 +8,8 @@ set nowrap
 set noswapfile
 set backspace=indent,eol,start
 set foldmethod=marker
-set number
 set scrolloff=5
+set number
 set ruler
 set noerrorbells
 set history=1000
@@ -18,16 +17,24 @@ set wildmenu
 set wildmode=longest,list
 set vb t_vb=
 set mouse=
-set fillchars+=vert:│
+set fillchars+=vert:
 set list
-set listchars=tab:\│\ ,trail:-
-"set expandtab
-
-set laststatus=4
+set listchars=tab:\\ ,trail:-
+set laststatus=2
 set splitright
 set splitbelow
 set autochdir
 set mouse=a
+
+" autocompletion
+inoremap { {<CR><BS>}<Esc>ko
+inoremap " ""<Left>
+inoremap ( ()<Left>
+inoremap [ []<Left>
+
+
+" enable clipboard
+set clipboard=unnamedplus
 
 " enable pathogen
 execute pathogen#infect()
@@ -147,8 +154,7 @@ hi TagbarNestedKind ctermbg=blue ctermbg=none cterm=none
 
 " }}}
 
-colorscheme herald
-"colorscheme matrix
+colorscheme glitchco
 
 au VimEnter * RainbowParenthesesToggle
 au VimEnter * RainbowParenthesesLoadRound
