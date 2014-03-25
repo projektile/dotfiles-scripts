@@ -1,0 +1,313 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/*
+ * Edit this file and copy it as userChrome.css into your
+ * profile-directory/chrome/
+ */
+
+/*
+ * This file can be used to customize the look of Mozilla's user interface
+ * You should consider using !important on rules which you want to
+ * override default settings.
+ */
+
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+/*
+ * Check the url below for object references
+ * chrome://browser/content/browser.xul
+ */
+
+/* Currently set to hide scrollbar */
+/*#content browser { margin-right:-15px!important; overflow-y:scroll; overflow-x:hidden;}
+ *#content browser { margin-bottom: 0px!important; overflow-y:scroll; overflow-x:hidden;}*/
+
+/* Toolbar Button */
+toolbarbutton#appmenu-toolbar-button,
+toolbarbutton#alltabs-button{
+        margin: -2px!important;
+        margin-left: -4px!important;
+        width: 24px!important;
+    }
+
+    .chromeclass-toolbar{
+    max-height: 16px!important;
+    min-height: 16px!important;
+    }
+
+    #urlbar dropmarker,
+    #identity-box,
+    #star-button,
+    #go-button,
+    .tab-throbber,
+    .tab-throbber[progress] {
+        display: none !important;
+    }
+    window {
+        font-size: 10px !important;
+        font-family:tewi! important;
+    }
+    #urlbar-container 
+    {
+        max-width:200px!important;
+        min-width:200px!important;
+        margin-right: -6px!important;
+    }
+    #urlbar
+    {
+        border-right: -4px solid #111111!important;
+        color: #aaa!important;
+        border-width: 0px!important;
+        font-family:tewi!important;
+        font-size: 10px !important;
+        max-height:24px!important;
+        min-height:24px!important;
+        padding:0 0 0 0px!important;
+        margin-top: -3px!important;
+        margin-bottom: -3px!important;
+        margin-left: -3px!important;
+        margin-right: -3 px!important;
+        text-align:left!important;
+        user_pref("browser.urlbar.showSearch", false);
+    }
+    #urlbar:hover,
+    {
+        background:#222!important;
+        text-align:center!important;
+        color:#fff!important;
+    }
+    #main-window #tabbrowser-tabs tab:hover,
+    {
+        background:#111!important;
+        text-align:center!important;
+        color:#fff!important;
+    }
+    #main-window #tabbrowser-tabs tab[selected]
+    {
+        background:#222!important;
+        text-align:center!important;
+        color:#fff!important;
+    }
+
+
+    /* TABS */
+    #main-window #tabbrowser-tabs tab
+    {
+        font-size: 10px !important;
+        font-family:tewi!important;
+        background:#111111!important;
+        border:0px solid #111111!important;
+        /*border-left:2px solid #111111!important;*/
+        color:#aaaaaa!important;
+        margin:0!important;
+        max-height:18px!important;
+        min-height:18px!important;
+        padding:0px!important;
+        text-shadow:rgba(0,0,0,.8) 0 0 1px!important;
+        border-radius:0!important;
+        text-align:center!important;
+    }
+    #main-window #tabbrowser-tabs tab:last-child
+   {
+        text-align:center!important;
+    }
+    #main-window #tabbrowser-tabs tab .tab-throbber,
+    #main-window #tabbrowser-tabs tab .tab-icon-image
+    {
+        max-height:12px!important;
+        max-width:18px!important;
+        margin-top:0%!important;
+        margin-right:2px!important;
+        padding-left:4px!important;
+        text-align:center!important;
+        text-transform:12!important;
+    }
+    #main-window #tabbrowser-tabs tab[fadein]
+    {
+        -moz-transition:color .1s ease-in,all .2s!important;
+    }
+    #main-window #tabbrowser-tabs tab .tab-close-button
+    {
+        margin-top:-2px!important;
+        margin-right:2px!important;
+        opacity:0!important;
+        -moz-transition:opacity .1s ease-in!important;
+    }
+    #main-window #tabbrowser-tabs tab .tab-close-button .toolbarbutton-icon
+    {
+        max-height:12px!important;
+        max-width:12px!important;
+    }
+    #main-window #tabbrowser-tabs tab[selected] .tab-close-button,
+    #main-window #tabbrowser-tabs tab:hover .tab-close-button
+    {
+        opacity:1!important;
+        text-align:center!important;
+    }
+    #main-window #tabbrowser-tabs tab[fadein]:not([pinned])
+    {
+        min-width:100%!important;
+        text-align:center!important;
+        max-width:100%!important;
+    }
+    #main-window #tabbrowser-tabs tab[pinned]
+    {
+        max-width:100%!important;
+        text-align:center!important;
+        min-width:100%!important;
+        padding-right:4px!important;
+    }
+    #main-window #tabbrowser-tabs tab[pinned] .tab-close-button
+    {
+        display:none!important;
+        text-align:center!important;
+    }
+
+
+    /* ADD ON BAR */
+    toolbar#addon-bar
+    {
+        background:#161616!important;
+        /*border:0px solid #101010!important;*/
+        max-height:20px!important;
+        min-height:20px!important;
+        -moz-appearance:none!important; */
+        display:none!important;
+    }
+    toolbar#addon-bar toolbarbutton
+    {
+                display:none!important;
+    }
+    scrollbox#PlacesToolbarItems toolbarbutton
+    {
+        border:0!important;
+        border-left:1px solid transparent!important;
+        border-right:1px solid transparent!important;
+        max-height:18px!important;
+        min-height:18px!important;
+        max-width:24px!important;
+        min-width:24px!important;
+        padding:0 0 0 3px!important;
+        -moz-appearance:none!important;
+    }
+    scrollbox#PlacesToolbarItems toolbarbutton .toolbarbutton-icon
+    {
+        height:16px!important;
+        opacity:.5;
+        width:16px!important;
+        -moz-transition:all .1s linear;
+    }
+    scrollbox#PlacesToolbarItems toolbarbutton:hover .toolbarbutton-icon
+    {
+        opacity:1;
+    }
+    scrollbox#PlacesToolbarItems toolbarbutton:hover
+   {
+        background:#222!important;
+        border-left:1px solid #101010!important;
+        border-right:1px solid #101010!important;
+        box-shadow:#0f0f0f 0 -1px 3px;
+    }
+    scrollbox#PlacesToolbarItems toolbarbutton:active
+   {
+        background:#101010!important;
+        border-left:1px solid #101010!important;
+        border-right:1px solid #101010!important;
+    }
+    scrollbox#PlacesToolbarItems toolbarbutton:first-child,
+    scrollbox#PlacesToolbarItems toolbarbutton:first-child:hover,
+    scrollbox#PlacesToolbarItems toolbarbutton:first-child:active
+   {
+        border-left:0!important;
+    }
+     
+    /* MAIN WINDOW */
+/*    #main-window #urlbar,
+    #main-window #urlbar-container
+    {
+     max-height:14px!important;
+     min-height:14px!important  
+     max-width:200px!important;
+    }*/
+    #main-window:not([chromehidden*="toolbar"])
+    {
+        margin:0!important;
+    }
+    #main-window #TabsToolbar
+    {
+        background:#161616!important;
+        /*border:1px solid #101010!important;*/
+        max-height:18px!important;
+        min-height:18px!important;
+        margin:0 -1px 0 0!important;
+        padding:0!important;
+        -moz-appearance:none!important;
+    }
+    select > button,
+    select > input
+    {
+        opacity:0!important;
+    }
+     
+    body > img.decoded {
+        background:none!important;
+    }
+    #content[disablehistory] {
+        background-color:#111111!important;
+    }
+    .db_progress-bar {
+        background:#7c915a!important;
+    }
+    .db_finishedHbox {
+        background:#424e60!important;
+    }
+    .db_progressVbox > description {
+        font-family:'monospace'!important;
+        font-size:10px!important;
+        font-weight:400!important;
+    }
+    #_dlbar_finTipContent {
+        background:#222!important;
+        border:0!important;
+        border-radius:0px!important
+    }
+
+/* show New Tab button on toolbar */
+#new-tab-button { display: none !important; }
+/* show New Tab button on tab bar */
+.tabs-newtab-button { display: none !important; }
+close-button tabs-closebutton {display: none;}
+
+/*
+ * Some possible accessibility enhancements:
+ */
+/*
+ * Make all the default font sizes 20 pt:
+ *
+ * * {
+ *   font-size: 20pt !important
+ * }
+ */
+/*
+ * Make menu items in particular 15 pt instead of the default size:
+ *
+ * menupopup > * {
+ *   font-size: 15pt !important
+ * }
+ */
+/*
+ * Give the Location (URL) Bar a fixed-width font
+ *
+ * #urlbar {
+ *    font-family: monospace !important;
+ * }
+ */
+
+/*
+ * For more examples see http://www.mozilla.org/unix/customizing.html
+ */
+ 
