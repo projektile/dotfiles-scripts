@@ -1,4 +1,3 @@
-
 " General {{{
 "---------------
 
@@ -27,8 +26,16 @@ set splitbelow
 set autochdir
 set mouse=a
 
+" CTRL-V and SHIFT-Insert are Paste
+inoremap <C-V>   	<ESC>"+gp
+inoremap <S-Insert>  	<ESC>"+gp
+nnoremap <C-V>   	<ESC>"+gp
+nnoremap <S-Insert>  	<ESC>"+gp
+vnoremap <C-V>   	<ESC>"+gp
+vnoremap <S-Insert>  	<ESC>"+gp
+
 " autocompletion
-inoremap { {<CR><BS>}<Esc>ko
+" inoremap { {<CR><BS>}<Esc>ko
 inoremap " ""<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
@@ -130,6 +137,30 @@ nmap <leader>q :q!<cr>
 "--------------
 
 set t_Co=8
+"hi CursorLine ctermbg=7 cterm=bold
+"hi CursorLineNr ctermfg=238 ctermbg=235
+"hi LineNr ctermfg=7
+"hi Constant ctermfg=5
+"hi Statement ctermfg=1
+"hi MatchParen ctermfg=8 ctermbg=6 cterm=none
+"hi TabLineFill term=bold cterm=bold ctermbg=none
+"hi TabLine ctermfg=15 ctermbg=none cterm=none
+"hi TabLineSel ctermfg=Black ctermbg=none cterm=none
+"hi VertSplit ctermfg=235 ctermbg=235 cterm=none
+"hi StatusLine cterm=none ctermfg=0 ctermbg=7
+"hi StatusLineNC cterm=none ctermfg=235 ctermbg=235
+"hi Normal ctermfg=0 ctermbg=none
+"hi Directory ctermfg=4 cterm=none
+"hi Folded ctermbg=235 cterm=none
+"hi SpecialKey ctermfg=7
+"hi Nontext ctermfg=7
+"hi TagbarIcon ctermfg=red cterm=none
+"hi TagbarHighlight ctermfg=red cterm=bold ctermbg=none
+"hi TagbarScope ctermfg=blue ctermbg=none cterm=none
+"hi TagbarKind ctermfg=blue ctermbg=none cterm=none
+"hi TagbarNestedKind ctermbg=blue ctermbg=none cterm=none
+
+" }}}
 
 colorscheme glitchco
 
@@ -138,4 +169,3 @@ au VimEnter * RainbowParenthesesLoadRound
 au VimEnter * RainbowParenthesesLoadSquare
 au VimEnter * RainbowParenthesesLoadBraces
 
-" }}}
