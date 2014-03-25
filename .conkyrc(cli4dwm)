@@ -1,14 +1,9 @@
 out_to_console yes
 out_to_x no
 background no
-update_interval 2
+update_interval 1
 total_run_times 0
 use_spacer none
 
 TEXT
-#$mpd_smart :: 
-#DOWN-[${downspeed wlan0}K/s] UP-[${upspeed wlan0}K/s] || ${time %a %b %d %I:%M%P}
-
-[VOL: ${exec amixer get Master -c 1 | grep -oE "[[:digit:]]*%"}]  [CPU: ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${cpu cpu4}%]  [RAM: $memperc% ($mem)]  [TEMP: ${acpitemp}°C]  [${time %a %b %d %I:%M%P}]
-
-
+ BATT: ${battery_percent}%  VOL: ${exec amixer get Master -c 1 | grep -oE "[[:digit:]]*%"}  CPU: ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${cpu cpu4}%  RAM: $memperc% ($mem)  TEMP: ${acpitemp}°C  ${time %a %b %d %I:%M%P}
