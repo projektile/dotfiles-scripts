@@ -1,5 +1,3 @@
-
-
 ! Xterm settings ------------------------------------------------------------
 
 *faceName: Tewi:style=Regular:size=8
@@ -42,40 +40,29 @@ URxvt.boldFont:xft:tewi:size=12
 URxvt.scrollBar: false
 URxvt.depth: 8
 URxvt*termName: rxvt
-
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-
 URxvt.iso14755: False
-
 URxvt.perl-ext-common: default,clipboard
 
 ! Terminal colors
 ! basic scheme
 *background: #111111
 *foreground: #d8d8d8
-! Black + DarkGrey
-*color0:  #000000
-*color8:  #555753
-! DarkRed + Red
-*color1:  #ba7b1e
-*color9:  #ebbc48
-! DarkGreen + Green
-*color2:  #728059
-*color10: #9ebf60
-! DarkYellow + Yellow
-*color3:  #596380
-*color11: #6078bf
-! DarkBlue + Blue
-*color4:  #3465a4
-*color12: #405974
-! DarkMagenta + Magenta
-*color5:  #75507b
-*color13: #8a4b66
-! DarkCyan + Cyan
-*color6:  #153b50
-*color14: #678472
-! LightGrey + White
-*color7:  #d3d7cf
-*color15: #eeeeee
 
+*color1: #8c5b3e
+*color2: #80764d
+*color3: #917154
+*color4: #596875
+*color5: #6e464b
+*color6: #495e61
+*color7: #bcbcaf
+*color8: #505050
+*color9: #9f6744
+*color10: #80785a
+*color11: #917963
+*color12: #656d75
+*color13: #6e5155
+*color14: #525F61
+*color15: #c1c4bc
+*color16: #c6c6c6
 
