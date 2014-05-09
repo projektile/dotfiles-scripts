@@ -35,10 +35,12 @@ Shift <Btn1Up>: select-end(CLIPBOARD, CUT_BUFFER1) \n\
 Shift ~Ctrl ~Meta <Btn2Up>:insert-selection(CLIPBOARD, CUT_BUFFER1)
 
 !RXVT Settings
-URxvt.font: xft:tewi:size=12
-URxvt.boldFont:xft:tewi:size=12
+URxvt.font:xft:tewi:size=8
+URxvt.boldFont:xft:tewi:size=8
 URxvt.scrollBar: false
+URxvt*urlLauncher: firefox
 URxvt.depth: 8
+URxvt*saveLines: 65535
 URxvt*termName: rxvt
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
@@ -46,16 +48,17 @@ URxvt.perl-ext-common: default,clipboard
 
 ! Terminal colors
 ! basic scheme
-*background: #111111
+*background: #151515
 *foreground: #d8d8d8
 
+*color0: #a6a6a6
 *color1: #8c5b3e
 *color2: #80764d
 *color3: #917154
 *color4: #596875
 *color5: #6e464b
-*color6: #495e61
-*color7: #bcbcaf
+*color6: #3b585b
+*color7: #222222
 *color8: #505050
 *color9: #9f6744
 *color10: #80785a
@@ -63,6 +66,4 @@ URxvt.perl-ext-common: default,clipboard
 *color12: #656d75
 *color13: #6e5155
 *color14: #525F61
-*color15: #c1c4bc
-*color16: #c6c6c6
-
+*color15: #888888
