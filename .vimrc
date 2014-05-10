@@ -35,13 +35,6 @@ nnoremap <S-Insert>  	<ESC>"+gp
 vnoremap <C-V>   	<ESC>"+gp
 vnoremap <S-Insert>  	<ESC>"+gp
 
-" autocompletion
-"inoremap { {<CR><BS>}<Esc>ko
-inoremap " ""<Left>
-inoremap ( ()<Left>
-inoremap [ []<Left>
-
-
 " enable clipboard
 set clipboard=unnamedplus
 
