@@ -1,26 +1,3 @@
-! Xterm settings ------------------------------------------------------------
-
-*faceName: Tewi:style=Regular:size=8
-*allowBoldFonts: false
-
-! {{{ Quick Reference
-!
-! Scrolling:
-! Scroll Wheel
-! Shift-PgUp/PgDn
-!
-! Copy/Paste:
-! Mouse-Select : Copy to PRIMARY
-! Shift + Mouse-Select: Copy to CLIPBOARD
-!
-! Middle-Click : Paste from PRIMARY
-! Shift + Middle-Click: Paste from CLIPBOARD
-!
-! Ctrl+Shift+V : Paste from CLIPBOARD
-! Ctrl+Alt+Shift+V : Paste from PRIMARY
-!
-! }}}
- 
 ! URXVT settings ------------------------------------------------------------
 
 ! More Konsole/Yakuake-like keybindings:
