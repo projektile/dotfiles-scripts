@@ -4,10 +4,12 @@ visualizer_sync_interval = "2"
 visualizer_type = "wave" (spectrum/wave)
 #visualizer_type = "spectrum" (spectrum/wave)
 visualizer_in_stereo = "no"
-visualizer_look = "◆▋"
-visualizer_color = "yellow"
+visualizer_look = "●▋"
+#visualizer_look = "▋▋"
+visualizer_color = "red"
+progressbar_look = "─□─"
+#progressbar_look = "█ " #"■■■" #"◻■"
 
-progressbar_look = "◾◽◾" #─◊─
 
 #user_interface = "alternative"
 locked_screen_width_part = "60"
@@ -63,14 +65,14 @@ playlist_disable_highlight_delay = "0"
 ## %r - begin right align
 ##
 ## you can also put them in { } and then it will be displayed
-## only if all requested values are available and/or define alternate
-## value with { }|{ } eg. {%a - %t}|{%f}
+#MaMaMaMaMaMaMaMaMa# only if all requested values are available and/or define alternate
+## value with { }|{Ma } eg. {%a - %t}|{%f}
 ##
 ## text can also have different color than the main window has,
-## eg. if you want length to be green, write $3%l$9
+## eg. if you want leMangth to be green, write $3%l$9
 ##
 ## available values:
-##
+##Ma
 ## - 0 - default window color
 ## - 1 - black
 ## - 2 - red
@@ -82,12 +84,13 @@ playlist_disable_highlight_delay = "0"
 ## - 8 - white
 ## - 9 - end of current color
 ##
-## Note: colors can be nested.
+## Note: cMaolors can be nested.
 ##
 
-song_list_format = "{$8(%l)$9 }{%t}|{$8%f$9}" #{%a  - }
+song_list_format = "{$8(%l)$9 }{%t}|{$6%f$9}" #{%a  - }
 
-song_library_format = "{%n - }{%t}|{%f}"
+song_library_format = "{%n > }{%t}|{%f}"
+#song_library_format = "{%n - }{%t}|{%f}"
 
 media_library_album_format = "{(%y) }%b"
 
@@ -103,20 +106,21 @@ selected_item_suffix = "$9"
 #
 #song_status_format = "{(%l) }{%a - }{%t}|{%f}"
 #
-#song_window_title_format = "{%a - }{%t}|{%f}"
+song_window_title_format = "{%a - }{%t}|{%f}"
 #
 ##### columns settings #####
-##
+##Ma
 ## syntax of song columns list format is "column column etc."
 ##
-## - syntax for each column is:
+## -Ma syntax for each column is:
 ##
 ## (width of column in %)[column's color]{displayed tag}
 ##
 ## - color is optional (if you want the default one, type [])
 ##
 #
-song_columns_list_format = "(10)[blue]{l} (35)[white]{a} (53)[white]{t}" # (10)[black]{f} 
+song_columns_list_format = "(12)[magenta]{l} (30)[blue]{a} (53)[green]{t}" # (10)[black]{f} 
+
 #
 ##### various settings #####
 #
@@ -183,11 +187,11 @@ lyrics_database = "1"
 #
 colors_enabled = "yes"
 #
-empty_tag_color = "white"
+empty_tag_color = "blue"
 #
 header_window_color = "green"
 #
-volume_color = "magenta"
+volume_color = "red"
 #
 state_line_color = "white"
 #
@@ -199,13 +203,15 @@ color1 = "blue"
 #
 color2 = "cyan"
 #
-main_window_highlight_color = "white"
+main_window_highlight_color = "red"
 #
-progressbar_color = "cyan"
+#progressbar_color = "magnenta"
+#progressbar_bg_color = "white"
+progressbar_elapsed_color = "magenta"
 #
-statusbar_color = "white"
+statusbar_color = "magenta"
 #
-active_column_color = "white"
+active_column_color = "red"
 #
 window_border_color = "white"
 #
