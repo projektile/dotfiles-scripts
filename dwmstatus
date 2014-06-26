@@ -19,33 +19,33 @@ glyph_vol="\uE015"
 glyph_tim="\uE016"
 glyph_tor="\uE017"
 glyph_temp="\uE01E"
-sep_solid="\uE01A"
-sep_line="\uE01B"
-sep_bar="\uE020"
+sep_vert="\uE01F"
+sep_line="\uE01A"
+sep_bar="\uE01B"
 
 print_batt_rem() {
   batt_rem="$(battery| awk '{print $2}')"
-  echo -ne "${sep_line} ${glyph_batt} ${batt_rem}% "
+  echo -ne "${sep_vert}${glyph_batt}${batt_rem}% "
 }
 
 print_mem_used() {
   mem_used="$(free -m | awk 'NR==3 {print $3}')"
-  echo -ne "${sep_line} ${glyph_mem} ${mem_used}M "
+  echo -ne "${sep_vert}${glyph_mem}${mem_used}M "
 }
 
 print_volume() {
-  temp="$(amixer get Master -c 1 | grep -oE "[[:digit:]]*%")"
-  echo -ne "${sep_line} ${glyph_vol} ${temp} "
+  vol="$(amixer get Master -c 1 | grep -oE "[[:digit:]]*%")"
+  echo -ne "${sep_vert}${glyph_vol}${vol} "
 }
 
 print_temp() {
   temp="$(sensors |grep -m 1 temp1 | cut -c16-17)"
-  echo -ne "${sep_line} ${glyph_temp} ${temp}C "
+  echo -ne "${sep_vert}${glyph_temp}${temp}C "
 }
 
 print_datetime() {
   datetime="$(date "+%a %d %b %H:%M")"
-  echo -ne "${glyph_tim} ${datetime}"
+  echo -ne "${sep_vert}${glyph_tim}${datetime}"
 }
 
 # network (from: http://dzen.geekmode.org/dwiki/doku.php?id=dzen:network-meter)
@@ -66,30 +66,28 @@ while true; do
   # calculate the rate (K) and total (M)
   let rx_rate=($rx_now-$rx_old)/1024
   let tx_rate=($tx_now-$tx_old)/1024
-  #  let rx_total=$rx_now/1048576
-  #  let tx_total=$tx_now/1048576
 
   # output vars
   print_cpu_used() {
-    printf "%-10b" "${sep_line} ${glyph_cpu} ${cpu_used}%"
+    printf "%-10b" "${sep_vert}${glyph_cpu}${cpu_used}% "
   }
   print_rx_rate() {
-    printf "%-11b" "${sep_line} ${glyph_dl} ${rx_rate}K "
+    printf "%-10b" "${sep_vert}${glyph_dl}${rx_rate}K "
   }
   print_tx_rate() {
-    printf "%-15b" "${sep_line} ${glyph_ul} ${tx_rate}K  ${sep_line}"
+    printf "%-10b" "${sep_vert}${glyph_ul}${tx_rate}K "
   }
 
   # Pipe to status bar, not indented due to printing extra spaces/tabs
   xsetroot -name "\
- $(print_batt_rem)\
- $(print_cpu_used)\
- $(print_mem_used)\
- $(print_volume)\
- $(print_temp)\
- $(print_rx_rate)\
- $(print_tx_rate)\
- $(print_datetime)"
+$(print_cpu_used)\
+$(print_mem_used)\
+$(print_volume)\
+$(print_temp)\
+$(print_rx_rate)\
+$(print_tx_rate)\
+$(print_batt_rem)\
+$(print_datetime)"
 
   # reset old rates
   rx_old=$rx_now
