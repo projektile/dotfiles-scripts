@@ -1,10 +1,9 @@
-
 " General {{{
 "---------------
 
 " basic settings
 set tabstop=4
-set shiftwidth=4
+set shiftwidth=4 "expandtab
 set nowrap
 set noswapfile
 set backspace=indent,eol,start
@@ -17,7 +16,6 @@ set history=1000
 set wildmenu
 set wildmode=longest,list
 set vb t_vb=
-""set mouse=
 set fillchars+=vert:│
 set list
 set listchars=tab:\│\ ,trail:-
@@ -26,6 +24,7 @@ set splitright
 set splitbelow
 set autochdir
 set mouse=a
+set completeopt=longest,menuone
 
 " CTRL-V and SHIFT-Insert are Paste
 inoremap <C-V>   	<ESC>"+gp
@@ -43,6 +42,17 @@ execute pathogen#infect()
 
 " enable NERDtree
 map <C-n> :NERDTreeToggle<CR>
+
+" enable NeoComplete
+"au VimEnter * NeoCompleteEnable
+let g:neocomplete#enable_at_startup = 1
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+    \ }
 
 " enable utf8
 set encoding=utf8
@@ -71,6 +81,19 @@ augroup CursorLine
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
 augroup END
+
+" statusline
+set statusline=   " clear the statusline for when vimrc is reloaded
+set statusline+=%-3.3n\                      " buffer number
+set statusline+=%f\                          " file name
+set statusline+=%h%m%r%w                     " flags
+set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
+set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
+set statusline+=%{&fileformat}]              " file format
+set statusline+=%=                           " right align
+set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
+set statusline+=%b,0x%-8B\                   " current char
+set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
 
 " source .vimrc
 autocmd vimenter * source $MYVIMRC
@@ -140,4 +163,3 @@ au VimEnter * RainbowParenthesesLoadSquare
 au VimEnter * RainbowParenthesesLoadBraces
 
 " }}}
-
