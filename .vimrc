@@ -155,6 +155,7 @@ nmap <leader>q :q!<cr>
 
 set t_Co=16
 
+"colorscheme koehler
 colorscheme glitchco
 
 au VimEnter * RainbowParenthesesToggle
