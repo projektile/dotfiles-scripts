@@ -14,7 +14,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# unicode/ascii ps1
+EDITOR="/usr/bin/vim"
+export EDITOR
+
+# ascii ps1
 PS1="%{$fg[green]%}╺─[%{$fg[magenta]%}%~%{$fg[green]%}]─╼>> %{$reset_color%}"
 # powerline ps1
 #PS1="%{$bg[white]%}%{$fg[yellow]%} %{$fg[magenta]%}%~ %{$bg[red]%}%{$fg[white]%}%{$reset_color%}%{$fg[red]%} %{$reset_color%}"
@@ -45,4 +48,6 @@ unpack () {
 alias mus="ncmpcpp"
 alias music="ncmpcpp"
 alias wee="weechat-curses"
-alias trans="transmission-daemon && transmission-remote-cli"
+alias transmit="transmission-daemon; sleep 2; transmission-remote --blocklist-update; transmission-remote-cli; transmission-remote --exit"
+alias rice="toilet -f future --gay -w 250"
+alias view="viewnior"
