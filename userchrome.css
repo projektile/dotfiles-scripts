@@ -1,5 +1,3 @@
-// This is for firefox v29 (austrelis) and does NOT require classic theme restorer. ^_^
-
 #PanelUI-button,
 #bookmarks-menu-button,
 #downloads-button,
@@ -18,7 +16,7 @@
 }
 
 #urlbar-wrapper {
-	margin-left: -9px !important;
+	margin-left: -5px !important;
 	margin-right: 0px !important;
 	padding-left: 5px !important;
 }
@@ -28,18 +26,19 @@
 	border-radius: 0 !important;
 	margin: 0 0 0 0 !important;
 	padding: 0 5px 1px 5px !important;
-	height: 16px !important;
-	min-height: 16px !important;
+	height: 18px !important;
+	min-height: 18px !important;
 	background: #252525 !important;
 	color: #cccccc !important;
-	font-family: "tewi" !important;
+	font-family: "berry" !important;
 	font-size: 11px !important;
 }
 
 #nav-bar {
-	height: 16px !important;
-	min-height: 16px !important;
-	margin: 0 !important;
+	height: 18px !important;
+	min-height: 18px !important;
+	margin-top: 0 !important;
+	margin-right: -5px !important;
 }
 
 #nav-bar-customization-target {
@@ -59,9 +58,9 @@
 
 tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
 	-moz-appearance: none !important;
-	border-radius: 0px !important;
-	border: none !important;
-	border-bottom: none !important;
+	border-width: 0px !important;
+	border-radius: 0px !important;	
+	border-bottom: 0px !important;
 	background-image: none !important;
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
@@ -74,22 +73,21 @@ tabs#tabbrowser-tabs {
 	font-weight: normal !important;
 	text-align: center !important;
 	padding-top: 0px !important;
-	margin-left: 0px !important;
+	margin-left: -1px !important;
 	padding-top: 0px !important;
-	border-bottom: 0px !important;
+	
 }
 
 .tabbrowser-tab {
 	color: #aaaaaa !important;
 	background: #151515 !important;
 	margin-left: 0px !important;
-	border-bottom: 0px !important;
+	
 }
 
 .tabbrowser-tab[selected=true] {
 	color: #cccccc !important;
-	background: #252525 !important; /*#202020*/
-	border-bottom: 0px !important;
+	background: #252525 !important;
 	box-shadow: none !important;
 }
 
@@ -98,13 +96,15 @@ tabs#tabbrowser-tabs {
 	margin-right: 3px !important;
 	margin-top: 3px !important;
 	padding-top: 3px !important;
-	font-family: "tewi" !important;
-	font-size: 11px !important;  
+	font-family: "berry" !important;
+	font-size: 11px !important;
+	
 }
 
 .tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
 	min-width: 30px !important;
 	max-width: 100% !important;
+	
 }
 
 .tabbrowser-tab[selected="true"]:after {
