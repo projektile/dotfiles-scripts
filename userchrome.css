@@ -29,7 +29,7 @@
 	border: 0 !important;
 	border-radius: 0 !important;
 	margin: 0 0 0 0 !important;
-	padding: 0 5px 1px 5px !important;
+	padding: 0 -5px 1px 5px !important;
 	height: 17px !important;
 	min-height: 17px !important;
 	background: #252525 !important;
