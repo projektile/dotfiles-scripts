@@ -1,3 +1,7 @@
+
+    /* AGENT_SHEET */
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
 #PanelUI-button,
 #bookmarks-menu-button,
 #downloads-button,
@@ -26,8 +30,8 @@
 	border-radius: 0 !important;
 	margin: 0 0 0 0 !important;
 	padding: 0 5px 1px 5px !important;
-	height: 18px !important;
-	min-height: 18px !important;
+	height: 17px !important;
+	min-height: 17px !important;
 	background: #252525 !important;
 	color: #cccccc !important;
 	font-family: "berry" !important;
@@ -35,10 +39,10 @@
 }
 
 #nav-bar {
-	height: 18px !important;
-	min-height: 18px !important;
+	height: 17px !important;
+	min-height: 17px !important;
 	margin-top: 0 !important;
-	margin-right: -5px !important;
+	margin-right: 0px !important;
 }
 
 #nav-bar-customization-target {
@@ -47,13 +51,14 @@
 	text-align: center;
 }
 
-
-    /* AGENT_SHEET */
-@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 #appcontent,
 #appcontent > #content,
 #appcontent > #content > tabbox > tabpanels {
 	background: #303030 !important;
+}
+
+* {
+	border-width: 0px !important;
 }
 
 tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
@@ -64,8 +69,9 @@ tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
 	background-image: none !important;
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
-	max-height: 16px !important;
-	min-height: 16px !important;
+	max-height: 17px !important;
+	min-height: 17px !important;
+	bottom: 0px !important;
 }
 
 tabs#tabbrowser-tabs {
