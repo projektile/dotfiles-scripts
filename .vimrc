@@ -8,6 +8,7 @@ set nowrap
 set noswapfile
 set backspace=indent,eol,start
 set foldmethod=marker
+set nofoldenable
 set scrolloff=5
 set number
 set ruler
@@ -23,16 +24,8 @@ set laststatus=2
 set splitright
 set splitbelow
 set autochdir
-set mouse=a
+"set mouse=a
 set completeopt=longest,menuone
-
-" CTRL-V and SHIFT-Insert are Paste
-inoremap <C-V>   	<ESC>"+gp
-inoremap <S-Insert>  	<ESC>"+gp
-nnoremap <C-V>   	<ESC>"+gp
-nnoremap <S-Insert>  	<ESC>"+gp
-vnoremap <C-V>   	<ESC>"+gp
-vnoremap <S-Insert>  	<ESC>"+gp
 
 " enable clipboard
 set clipboard=unnamedplus
@@ -83,17 +76,14 @@ augroup CursorLine
 augroup END
 
 " statusline
-set statusline=   " clear the statusline for when vimrc is reloaded
-set statusline+=%-3.3n\                      " buffer number
-set statusline+=%f\                          " file name
-set statusline+=%h%m%r%w                     " flags
-set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
-set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
-set statusline+=%{&fileformat}]              " file format
-set statusline+=%=                           " right align
-set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
-set statusline+=%b,0x%-8B\                   " current char
-set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
+let g:lightline = {
+      \ 'colorscheme': 'glitchco',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
 
 " source .vimrc
 autocmd vimenter * source $MYVIMRC
@@ -113,8 +103,10 @@ syntax on
 
 " key bindings
 cmap w!! %!sudo tee > /dev/null %
-map K <C-u>
-map J <C-d>
+map K 10k
+map J 10j
+map <C-k> <C-u>
+map <C-j> <C-d>
 map L :tabnext<cr>
 map H :tabprev<cr>
 map T :tabnew<cr>
