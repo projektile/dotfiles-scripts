@@ -5,6 +5,8 @@ URxvt.boldFont:xft:berry:size=8
 URxvt.scrollBar: false
 URxvt*urlLauncher: firefox
 URxvt.depth: 8
+URxvt.cursorBlink: 1
+URxvt.cursorUnderline: 1
 URxvt*saveLines: 65535
 URxvt*termName: rxvt
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
@@ -15,7 +17,6 @@ URxvt.perl-ext-common: default,clipboard
 ! basic scheme
 *background: #151515
 *foreground: #d8d8d8
-
 *color0: #a5a5a5
 *color1: #8c5b3e
 *color2: #80764d
