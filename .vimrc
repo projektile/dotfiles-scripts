@@ -103,6 +103,11 @@ set formatoptions-=cro
 syntax on
 
 " key bindings
+"Map xclip copy/paste only
+"map <C-c> y
+"map <C-v> p
+vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR><CR>
+map <C-v> :r!xclip -selection clipboard -o<CR><CR>
 cmap w!! %!sudo tee > /dev/null %
 map K 10k
 map J 10j
@@ -119,12 +124,6 @@ map r :so $MYVIMRC<cr>
 map R :so $MYVIMRC<cr>
 map <C-o> :NERDTreeToggle<cr>
 map <C-b> :TagbarToggle<cr>
-"Map xclip copy/paste only
-"map <C-c> y
-"map <C-v> p
-map <C-c> :w !xclip<CR><CR>
-vmap <C-c> "*y
-map <C-v> :r!xclip -o<CR><CR>
 map <C-a> ggvG
 map <C-s> {v}
 map <C-n> :NERDTreeToggle<CR>
@@ -153,7 +152,7 @@ nmap <leader>q :q!<cr>
 "}}}
 
 " Colors {{{
-"--------------
+"-------------
 
 set t_Co=16
 
@@ -166,4 +165,5 @@ au VimEnter * RainbowParenthesesLoadSquare
 au VimEnter * RainbowParenthesesLoadBraces
 
 " }}}
+
 
