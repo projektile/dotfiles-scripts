@@ -1,11 +1,12 @@
-
 !RXVT Settings
 URxvt.font:xft:berry:size=8
 URxvt.boldFont:xft:berry:size=8
 URxvt.scrollBar: false
+URxvt.letterSpace: 0
+URxvt*scrollTtyOutput: false
 URxvt*urlLauncher: firefox
-URxvt.depth: 8
-URxvt.cursorBlink: 1
+URxvt.depth: 16
+URxvt.cursorBlink: 0
 URxvt.cursorUnderline: 1
 URxvt*saveLines: 65535
 URxvt*termName: rxvt
