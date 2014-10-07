@@ -1,3 +1,4 @@
+
 " General {{{
 "---------------
 
@@ -33,12 +34,12 @@ set clipboard=unnamedplus
 " enable pathogen
 execute pathogen#infect()
 
-" enable NERDtree
-map <C-n> :NERDTreeToggle<CR>
-
 " enable NeoComplete
 "au VimEnter * NeoCompleteEnable
 let g:neocomplete#enable_at_startup = 1
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
@@ -107,6 +108,8 @@ map K 10k
 map J 10j
 map <C-k> <C-u>
 map <C-j> <C-d>
+map p e
+map o b
 map L :tabnext<cr>
 map H :tabprev<cr>
 map T :tabnew<cr>
@@ -116,11 +119,18 @@ map r :so $MYVIMRC<cr>
 map R :so $MYVIMRC<cr>
 map <C-o> :NERDTreeToggle<cr>
 map <C-b> :TagbarToggle<cr>
-imap jk <Esc><Esc>
-imap kj <Esc><Esc
+"Map xclip copy/paste only
+"map <C-c> y
+"map <C-v> p
+map <C-c> :w !xclip<CR><CR>
+vmap <C-c> "*y
+map <C-v> :r!xclip -o<CR><CR>
+map <C-a> ggvG
+map <C-s> {v}
+map <C-n> :NERDTreeToggle<CR>
 nmap q :q<cr>
 nmap Q :wq<cr>
-nmap <C-v> V
+"nmap <C-v> V
 noremap <F1> <Esc>
 noremap ; :
 noremap , ;
@@ -140,7 +150,7 @@ noremap <leader><Space> za
 nmap <leader>w :w!<cr>
 nmap <leader>q :q!<cr>
 
-" }}}
+"}}}
 
 " Colors {{{
 "--------------
@@ -156,3 +166,4 @@ au VimEnter * RainbowParenthesesLoadSquare
 au VimEnter * RainbowParenthesesLoadBraces
 
 " }}}
+
