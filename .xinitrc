@@ -9,12 +9,12 @@
 #. /etc/X11/Xsession &
 
 xrdb .Xresources &
-nitrogen --restore &
 mpd -v --no-daemon --stdout &
-wmname LG3D &
-xset fp+ ~/.fonts &
-conky | while read -r; do xsetroot -name "$REPLY"; done &
-do
-	sleep 1
-done &
-#exec dwm
+#wmname LG3D &
+xset fp+ /usr/share/fonts/local &
+xset fp rehash &
+compton --config .config/compton.conf &
+mpdscribble &
+xset -dpms &
+
+exec awesome
