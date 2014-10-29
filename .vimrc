@@ -103,9 +103,8 @@ set formatoptions-=cro
 syntax on
 
 " key bindings
-map <C-c> +yy
-map <C-v> +P
-cmap w!! %!sudo tee > /dev/null %
+vmap <C-c> y: call system("xclip -i -selection clipboard", getreg("\""))<CR><CR>
+map <C-v> :r!xclip -selection clipboard -o<CR><CR>
 map K 10k
 map J 10j
 map <C-k> <C-u>
