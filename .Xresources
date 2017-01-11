@@ -1,18 +1,27 @@
+
 !RXVT Settings
-URxvt.font:xft:berry:size=8
-URxvt.boldFont:xft:berry:size=8
+URxvt.font:xft:Pragmatapro for powerline:style=Bold:size=8
+URxvt.boldFont:xft:Pragmatapro for powerline:style=Bold:size=8
+
 URxvt.scrollBar: false
-URxvt.letterSpace: 0
+URxvt.letterSpace: -2
 URxvt*scrollTtyOutput: false
-URxvt*urlLauncher: firefox
+URxvt*scrollTtyKeypress: true
 URxvt.depth: 16
 URxvt.cursorBlink: 0
 URxvt.cursorUnderline: 1
 URxvt*saveLines: 65535
 URxvt*termName: rxvt
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
-URxvt.perl-ext-common: default,clipboard
+URxvt.geometry: 80x20+120+140
+URxvt.print-pipe: "cat > /dev/null"
+
+! -- perl
+URxvt.perl-ext-common: default,clipboard,matcher
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.url-launcher: /usr/bin/firefox
+URxvt.matcher.button: 1
 
 ! Terminal colors
 ! basic scheme
